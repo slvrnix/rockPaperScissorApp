@@ -231,13 +231,13 @@ MAIN
   width: 200px;
 }
 
-.rock > button, .paper > button, .scissors > button {
+.rock > button, .paper > button, .scissors > button, #game_start_btn {
   background-color: transparent;
   border: 0;
   transition: 0.2s;
 }
 
-.rock > button:hover, .paper > button:hover, .scissors > button:hover {
+.rock > button:hover, .paper > button:hover, .scissors > button:hover, #game_start_btn:hover {
   transform: scale(1.1);
   transition: 0.2s;
 }
@@ -310,6 +310,10 @@ IDs
   animation-fill-mode: forwards;
 }
 
+#game_start_btn > img {
+  width: 170px;
+}
+
 /*
 KEYFRAMES
 */
@@ -317,6 +321,12 @@ KEYFRAMES
   0%  {opacity: 0; transform:scale(3) translateY(-300px);}
   50% {opacity: 1; transform: scale(1);}
   100% {transform:translateY(0px);}
+}
+
+@keyframes chosenHand {
+  0% {transform: scale(1);}
+  50% {transform: scale(2);}
+  100% {transform: scale(1);}
 }
 
 @keyframes roundChange {}
