@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/photos/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors Cave</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header_controls">
+        <label class="switch">
+          <input type="checkbox" onchange="BackgroundMusic()" name="music" />
+          <span class="slider round">
+            <div class="toggle_imgs">
+              <img src="photos/musicOn.png" class="toggle_img_left" />
+              <img src="photos/musicOff.png" class="toggle_img_right" />
+            </div>
+          </span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" name="sfx" />
+          <span class="slider round">
+            <div class="toggle_imgs">
+              <img src="photos/sfxOn.png" class="toggle_img_left" />
+              <img src="photos/sfxOff.png" class="toggle_img_right" />
+            </div>
+          </span>
+        </label>
+      </div>
+      <div class="header_logo">
+        <img src="photos/mainLogo.png" alt="Main Logo" />
+      </div>
+      <div class="header_mode">
+        <label class="switch">
+          <input type="checkbox" onchange="ThemeChange()" name="theme" />
+          <span class="slider round">
+            <div class="toggle_imgs">
+              <img src="photos/moon.png" class="toggle_img_left" />
+              <img src="photos/sun.png" class="toggle_img_right" />
+            </div>
+          </span>
+        </label>
+      </div>
+    </header>
+    <main>
+      <section id="initialSection" class="screen screen_greeting">
+        <div class="hidden">
+          <img src="photos/dwarfGreeting.png" />
+        </div>
+        <div class="start_btn_box">
+          <button class="start_btn" id="startBtn" onclick="SectionSwitch()">
+            <img class="start_game_img" src="photos/gameStart.png" />
+          </button>
+        </div>
+        <div class="dwarf">
+          <img src="photos/dwarfGreeting.png" />
+          <img class="dwarf_speech_img" src="photos/messageInvert.png" />
+          <p class="dwarf_speech">Hello there!</p>
+        </div>
+      </section>
+      <section class="screen screen_game" id="mainSection">
+        <div class="hero">
+          <img src="photos/dwarfGreetingInverted.png" />
+        </div>
+        <div class="game_area">
+          <div class="rounds">
+            <img id="round_img" src="photos/roundOne.png" />
+          </div>
+          <div class="choices" id="choicesArea">
+            <div class="user_choice">
+              <div class="choice_text">Your hand:</div>
+              <div class="choice_img">
+                <img src="photos/unknown.png">
+              </div>
+            </div>
+            <div class="pc_choice">
+              <div class="choice_text">PC's hand:</div>
+              <div class="choice_img">
+                <img src="photos/unknown.png">
+              </div>
+            </div>
+          </div>
+          <div class="hands">
+            <div class="rock">
+              <button id="rock_btn">
+                <div class="hand_name">Rock</div>
+                <img class="hand_img" src="photos/rock.png" />
+              </button>
+            </div>
+            <div class="paper">
+              <button id="paper_btn">
+                <div class="hand_name">Paper</div>
+                <img class="hand_img" src="photos/paper.png" />
+              </button>
+            </div>
+            <div class="scissors">
+              <button id="scissors_btn">
+                <div class="hand_name">Scissors</div>
+                <img class="hand_img" src="photos/scissors.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hero">
+          <img id="pc_img" src="photos/pcMonster.png" />
+        </div>
+      </section>
+      <section class="screen screen_results" id="finalSection"></section>
+    </main>
+    <footer>
+      <div class="create_date">
+        This Site was built by Slvrnix in November 2025.
+      </div>
+      <div class="footer_credits"></div>
+    </footer>
+    <!--Background Music-->
+    <audio
+      id="backgroundMusic"
+      type="audio/mp3"
+      src="sfx/background.mp3"
+      loop
+    ></audio>
+    <script src="scripts.js"></script>
+  </body>
+</html>

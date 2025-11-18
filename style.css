@@ -1,0 +1,322 @@
+body {
+  margin: auto;
+  font-family: sans-serif, system-ui;
+}
+header {
+  display: flex;
+  height: 75px;
+  background-color: #97580d;
+  justify-content: space-between;
+}
+
+main {
+  background-color: #ebccad;
+  height: 900px;
+  transition: 0.5s;
+}
+
+footer {
+  background-color: #281a0b;
+  height: 65px;
+}
+
+.dark_mode {
+  background-color: #181E15;
+  transition: 0.5s;
+}
+/*
+HEADER
+*/
+
+/*
+The Toggle Switch | Taken from W3Schools
+*/
+
+.toggle_img_left {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-left: 10px;
+  border: 0;
+}
+
+.toggle_img_right {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
+  margin-right: 10px;
+  border: 0;
+}
+
+.toggle_imgs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ff8c00;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4b2c07;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(36px);
+}
+
+input:not(:checked) + .slider .toggle_imgs .toggle_img_left {
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+input:checked + .slider .toggle_imgs .toggle_img_right {
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.header_controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.header_btn {
+  height: 30px;
+  width: 55px;
+  border-radius: 20px;
+}
+
+.header_logo img {
+  height: 150px;
+  width: 150px;
+  padding-right: 85px;
+}
+
+.header_mode {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+/*
+MAIN
+*/
+.screen_greeting {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hidden {
+  margin-right: auto;
+  visibility: hidden;
+}
+
+.start_btn_box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dwarf {
+  margin-right: auto;
+  margin-top: 200px;
+}
+.start_btn {
+  background-color: transparent;
+  border: 0;
+  transition: 0.5s;
+}
+
+.start_btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  
+}
+
+.dwarf_speech_img {
+  position: absolute;
+  width: 220px;
+  right: 400px;
+}
+
+.dwarf_speech {
+  position: absolute;
+  top: 295px;
+  right: 440px;
+  font-size: 25px;
+  font-weight: 900;
+}
+.screen_greeting {                        /*Remove this once the second section is finished!*/
+  display: none;
+}
+
+.screen_game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.hands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 50px;
+}
+
+.hand_name {
+  font-size: 25px;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.hand_img {
+  width: 200px;
+}
+
+.rock > button, .paper > button, .scissors > button {
+  background-color: transparent;
+  border: 0;
+  transition: 0.2s;
+}
+
+.rock > button:hover, .paper > button:hover, .scissors > button:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.rounds {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  width: 700px;
+  height: 280px;
+  background-color: #97580d;
+  border-radius: 20px;
+  border: 4px solid #000;
+}
+
+.user_choice, .pc_choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice_text {
+  width: 150px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #fcbd70;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+.choice_img > img {
+  width: 200px;
+}
+
+.hero {
+  padding-top: 300px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.hero > img {
+  width: 300px;
+}
+
+/*
+IDs
+*/
+#music_img {
+  width: 28px;
+  height: 28px;
+  margin-top: 3px;
+  margin-left: 6px;
+  display: block;
+  border: 0;
+}
+
+#round_img {
+  width: 400px;
+  animation: firstRound 5s;
+  animation-fill-mode: forwards;
+}
+
+/*
+KEYFRAMES
+*/
+@keyframes firstRound {
+  0%  {opacity: 0; transform:scale(3) translateY(-300px);}
+  50% {opacity: 1; transform: scale(1);}
+  100% {transform:translateY(0px);}
+}
+
+@keyframes roundChange {}
